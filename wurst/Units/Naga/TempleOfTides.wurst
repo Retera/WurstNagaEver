@@ -1,0 +1,15 @@
+package TempleOfTides
+
+import UnitObjEditing
+import UnitIds
+import ObjectIdGenerator
+import MurlocSlave
+import ObjectIds
+
+@compiletime
+public let UNIT_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function gen()
+    new BuildingDefinition(UNIT_ID, UnitIds.templeoftides)
+        ..setName("Drowned Temple")
+        ..setUnitsTrained(MURLOC_UNIT_ID.toRawCode())
