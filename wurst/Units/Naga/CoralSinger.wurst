@@ -1,0 +1,23 @@
+package CoralSinger
+
+import UnitObjEditing
+import Assets
+import ObjectIdGenerator
+import ObjectIds
+
+import initlater Atoll
+
+public constant CORAL_SINGER_UNIT_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function gen()
+    new UnitDefinition(CORAL_SINGER_UNIT_ID, UnitIds.murgulslave)
+        ..setName("Coral Singer")
+        ..setModelFile("Units\\Creeps\\Murloc\\Murloc.mdx")
+        ..setTooltipBasic("Train Coral Singer")
+        ..setTooltipExtended("If you are reading this then I learned Wurst, which is GOOD")
+        ..setHitPointsMaximumBase(320)
+        ..setMovementType(MovementType.Amphipic)
+        ..setSpeedBase(150)
+        ..setIconGameInterface(Icons.bTNMurlocMutant)
+        ..setStructuresBuilt(ATOLL_UNIT_ID.toRawCode())
+        
