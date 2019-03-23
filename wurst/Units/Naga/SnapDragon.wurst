@@ -8,8 +8,8 @@ import ObjectDefinitionConstants
 
 public constant SNAPDRAGON_UNIT_ID = compiletime(UNIT_ID_GEN.next())
 
-constant BACKSWING_POINT    = .700
-constant DAMAGE_POINT       = .300
+constant BACKSWING_POINT    = .500
+constant DAMAGE_POINT       = .500
 
 constant GOLD_COST          = 180
 constant WOOD_COST          = 30
@@ -23,6 +23,10 @@ constant WOOD_COST          = 30
         ..setScalingValue(.8)
         ..setIconGameInterface(Icons.bTNSnapDragon)
         ..setUnitSoundSet(Soundsets.snapDragon)
+        ..setMaximumPitchAngledegrees(0.)
+        ..setMaximumRollAngledegrees(0.)
+        ..setProjectileImpactZ(60.)
+        ..setProjectileImpactZSwimming(0.)
 
         // UI
         ..setTooltipBasic("Train Snapdragon")
@@ -35,10 +39,13 @@ constant WOOD_COST          = 30
         ..setDefaultActiveAbility("")
         ..setNormalAbilities("")
 
+        // Tech
+        //..setStructuresBuilt()
+
         // Stats
-        //..setUnitClassification()
+        ..setUnitClassification("")
         ..setHitPointsMaximumBase(320)
-        //..setHitPointsRegenerationType()
+        ..setHitPointsRegenerationType("always")
         ..setHitPointsRegenerationRate(.25)
         ..setArmorSoundType(ArmorSoundType.Flesh)
         ..setArmorType(ArmorType.Small)
@@ -61,10 +68,14 @@ constant WOOD_COST          = 30
         // Upgrades
         //..setUpgradesUsed(data)
         ..setCasterUpgradeArt("")
-        ..setCasterUpgradeNames("Initiate" + "Master")
-        ..setCasterUpgradeTips("-A" + "-A /n-B" + "-A /n-B /n-C")
+        ..setCasterUpgradeNames("Initiate" + "," + "Master")
+        ..setCasterUpgradeTips("-A" + "," + "-A /n-B" + "," + "-A /n-B /n-C")
 
         // Attacks
+        ..setProjectileLaunchX(30.)
+        ..setProjectileLaunchY(0.)
+        ..setProjectileLaunchZ(40.)
+        ..setProjectileLaunchZSwimming(0.)
         ..setAcquisitionRange(600.)
         ..setAttacksEnabled(1)
 

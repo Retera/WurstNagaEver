@@ -2,5 +2,5 @@ package ObjectDefinitionConstants
 
 import TargetsAllowed
 
-public constant GENERIC_RANGED_TARGETS = TargetsAllowed.air + TargetsAllowed.ground + TargetsAllowed.structure + TargetsAllowed.ward + TargetsAllowed.item_t
-public constant GENERIC_GROUND_TARGETS = TargetsAllowed.ground + TargetsAllowed.structure + TargetsAllowed.ward + TargetsAllowed.item_t
+public constant GENERIC_RANGED_TARGETS = TargetsAllowed.air + "," + TargetsAllowed.ground + "," + TargetsAllowed.structure + "," + TargetsAllowed.ward + "," + TargetsAllowed.item_t
+public constant GENERIC_GROUND_TARGETS = TargetsAllowed.ground + "," + TargetsAllowed.structure + "," + TargetsAllowed.ward + "," + TargetsAllowed.item_t
