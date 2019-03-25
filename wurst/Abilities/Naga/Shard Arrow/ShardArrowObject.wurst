@@ -1,0 +1,12 @@
+package ShardArrowObject
+
+import AbilityObjEditing
+import AbilityIds
+import ObjectIdGenerator
+
+public constant SHARD_ARROW_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function gen()
+    //new AbilityDefinition(SHARD_ARROW_ID, AbilityId.poisonArrows)
+
+    

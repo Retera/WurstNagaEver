@@ -1,0 +1,8 @@
+package ShardArrow
+
+import AbilityIds
+import ClosureEvents
+
+class ShadArrow extends AbilityIds.poisonArrows
+    
+    

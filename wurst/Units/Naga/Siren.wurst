@@ -1,4 +1,4 @@
-package SnapDragon
+package Siren
 
 import UnitObjEditing
 import Assets
@@ -6,30 +6,30 @@ import ObjectIdGenerator
 import ObjectIds
 import ObjectDefinitionConstants
 
-public constant SNAPDRAGON_UNIT_ID = compiletime(UNIT_ID_GEN.next())
+public constant SIREN_UNIT_ID = compiletime(UNIT_ID_GEN.next())
 
 constant BACKSWING_POINT    = .500
 constant DAMAGE_POINT       = .500
 
-constant GOLD_COST          = 180
-constant WOOD_COST          = 30
+constant GOLD_COST          = 120
+constant WOOD_COST          = 60
 
 @compiletime function gen()
-    new UnitDefinition(SNAPDRAGON_UNIT_ID, UnitIds.snapdragon)
+    new UnitDefinition(SIREN_UNIT_ID, UnitIds.siren)
 
         // Appearance
-        ..setName("Snapdragon")
-        ..setModelFile(Units.snapDragon1)
-        ..setScalingValue(.8)
-        ..setIconGameInterface(Icons.bTNSnapDragon)
-        ..setUnitSoundSet(Soundsets.snapDragon)
+        ..setName("Siren")
+        ..setModelFile(Units.nagaSiren1)
+        ..setScalingValue(1.)
+        ..setIconGameInterface(Icons.bTNSirenMaster)
+        ..setUnitSoundSet(Soundsets.nagaSiren)
         ..setMaximumPitchAngledegrees(0.)
         ..setMaximumRollAngledegrees(0.)
         ..setProjectileImpactZ(60.)
         ..setProjectileImpactZSwimming(0.)
 
         // UI
-        ..setTooltipBasic("Train Snapdragon")
+        ..setTooltipBasic("Train Siren")
         ..setTooltipExtended("Ranged attacker with a stacking poison attack.")
         ..setButtonPositionX(0)
         ..setButtonPositionY(1)
@@ -44,19 +44,19 @@ constant WOOD_COST          = 30
 
         // Stats
         ..setUnitClassification("")
-        ..setHitPointsMaximumBase(320)
+        ..setHitPointsMaximumBase(225)
         ..setHitPointsRegenerationType("always")
         ..setHitPointsRegenerationRate(.25)
         ..setArmorSoundType(ArmorSoundType.Flesh)
-        ..setArmorType(ArmorType.Small)
+        ..setArmorType(ArmorType.Unarmored)
         ..setDefenseBase(0)
         ..setDefenseUpgradeBonus(2)
-        ..setManaInitialAmount(0)
-        ..setManaMaximum(0)
-        ..setManaRegeneration(0)
+        ..setManaInitialAmount(100)
+        ..setManaMaximum(200)
+        ..setManaRegeneration(0.67)
         ..setCollisionSize(8.)
         ..setMovementType(MovementType.Amphipic)
-        ..setSpeedBase(260)
+        ..setSpeedBase(240)
         ..setGoldCost(GOLD_COST)
         ..setLumberCost(WOOD_COST)
         ..setFoodCost(3)
@@ -72,7 +72,7 @@ constant WOOD_COST          = 30
         ..setCasterUpgradeTips("-A" + "," + "-A /n-B" + "," + "-A /n-B /n-C")
 
         // Attacks
-        ..setProjectileLaunchX(30.)
+        ..setProjectileLaunchX(60.)
         ..setProjectileLaunchY(0.)
         ..setProjectileLaunchZ(40.)
         ..setProjectileLaunchZSwimming(0.)
@@ -80,7 +80,7 @@ constant WOOD_COST          = 30
         ..setAttacksEnabled(1)
 
         // Weapon 1
-        ..setAttack1AttackType(AttackType.Pierce)
+        ..setAttack1AttackType(AttackType.Magic)
         ..setAttack1WeaponSound(WeaponSound.Nothing)
         ..setAttack1WeaponType(WeaponType.Missile)
         ..setAttack1DamageBase(15)
@@ -88,7 +88,7 @@ constant WOOD_COST          = 30
         ..setAttack1DamageSidesperDie(3)
         ..setAttack1CooldownTime(1.8)
         ..setAttack1Range(600)
-        ..setAttack1ProjectileArt(Abilities.snapMissile)
+        ..setAttack1ProjectileArt(Abilities.bloodElfMissile)
         ..setAttack1ProjectileArc(.07)
         ..setAttack1ProjectileSpeed(900)
         ..setAttack1ProjectileHomingEnabled(true)
@@ -114,9 +114,9 @@ constant WOOD_COST          = 30
         ..setAttack2TargetsAllowed(TargetsAllowed.none)
 
         // Bounty
-        //..setGoldBountyAwardedBase(10)
-        //..setGoldBountyAwardedNumberofDice(2)
-        //..setGoldBountyAwardedSidesperDie(3)
+        ..setGoldBountyAwardedBase(10)
+        ..setGoldBountyAwardedNumberofDice(2)
+        ..setGoldBountyAwardedSidesperDie(3)
 
         // Extras
         ..setFormationRank(0)

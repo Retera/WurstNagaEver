@@ -114,6 +114,11 @@ constant WOOD_COST          = 0
         ..setAttack2AnimationDamagePoint(DAMAGE_POINT)
         ..setAttack2AnimationBackswingPoint(BACKSWING_POINT)
         ..setAttack2TargetsAllowed(TargetsAllowed.none)
+        
+        // Bounty
+        //..setGoldBountyAwardedBase(10)
+        //..setGoldBountyAwardedNumberofDice(2)
+        //..setGoldBountyAwardedSidesperDie(3)
 
         // Extras
         ..setFormationRank(0)
